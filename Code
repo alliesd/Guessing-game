@@ -1,0 +1,167 @@
+clear
+clc
+%clear every thing then start loop
+c=1;
+%i check and even at the fastest speed to fully complete this loop it would
+%26206 years to complete
+for k=1:100000000000
+    if(c==1)
+    
+disp('guess a number between 0 and 100')
+%generate random number
+a=randi(100);
+%choose difficulty
+d=input('chose difficulty(easy (-1) ,medium (-2), hard (-3), impossiblebly hard (-4),one shot(-5))=');
+e=-1;
+m=-2;
+h=-3;
+i=-4;
+o=-5;
+%diffculty becomes number of tries
+if (d==e)
+    n=16;
+    disp('you picked easy you have 16 tries good luck have fun')
+elseif (d==m)
+    n=8;
+    disp('you have picked medium you have 8 tries gool luck have fun')
+elseif (d==h)
+    n=4;
+    disp('you have picked hard you have 4 tries, you will most likely losses but give it a go')
+elseif (d==i)
+    n=2;
+    disp('you picked impossible, you have only 2 tries, you have a 0.0001% chance of winning')
+elseif (d==o)
+    n=1;
+    disp('you picked oneshot, only one guess, thats a 1% chance per game, you have to be really lucky or know the number before hand')
+    %secret options because its fun to see if people peek at the code -6
+    %being 100 tries and 1 million giving you the awnser and 1 try
+elseif (d==-6)
+    n=100;
+    disp ('you have picked the secret option, wow either i told you about it or you thought it would be a cool idea to check out if -6 was something but now you have 100 tries 1 for each number')
+elseif(d==1000000)
+    n=1;
+    disp('wow you picked the number 1 million, i wouldnt expect that to happen but here we are, you have one shot but im literally giving you the awnser')
+    pause(2)
+    disp(a)
+    pause(1)
+    disp('it is impossible to fail unless you dont follow the rules')
+end
+    pause(2.5)
+%user choice begins
+for i=1:n
+    
+    b=input('type your guess=');
+  
+    if(a>b)
+        disp('the random number is greater than your guessed try again')
+ 
+    elseif(a<b)
+        disp('the random number is lower than your guess try again')
+    
+    elseif(a==b)
+        disp('you have guessed correctly good job')
+        break
+    end
+end
+   %end screen
+pause(3)
+clc
+% the 2 losing conditions and the 1 win condition on lose you will find out
+% the awnser just to tease a player into trying again
+if(a<b )
+    disp('you lost you can try again....the awnser was')
+    disp(a)
+elseif(a>b)
+    disp('you lost you can try again....the awnser was')
+    disp(a)
+elseif(a==b)
+    disp('good job you guessed corectly, why not play again or play agin on a harder difficulty')
+end
+
+c=input('enter 1 to play again or enter 0 to end the game=');
+clc
+%game end
+elseif(c==0)
+    disp('see you later')
+    pause(3)
+    clc
+    break
+    end
+    
+%secret game but instead of 0-100 its 0-10000    
+    if(c==-1)
+disp('you have entered the secret game the diiculties are the same but now you have to pick between 0 and 10000')
+pause(5)
+clc
+disp('guess a number between 0 and 10000')
+%generate random number
+a=randi(10000);
+%choose difficulty
+d=input('chose difficulty(easy (-1) ,medium (-2), hard (-3), impossible (-4),one shot(-5))=');
+e=-1;
+m=-2;
+h=-3;
+i=-4;
+o=-5;
+%diffculty becomes number of tries
+if (d==e)
+    n=16;
+    disp('you picked easy you have 16 tries good luck have fun')
+elseif (d==m)
+    n=8;
+    disp('you have picked medium you have 8 tries gool luck have fun')
+elseif (d==h)
+    n=4;
+    disp('you have picked hard you have 4 tries, you will most likely losses but give it a go')
+elseif (d==i)
+    n=2;
+    disp('you picked impossible, you have only 2 tries, you have a 0.0001% chance of winning')
+elseif (d==o)
+    n=1;
+    disp('you picked oneshot, only one guess, thats a 1% chance per game, you have to be really lucky or know the number before hand')
+elseif (d==-6)
+    n=100;
+    disp ('you have picked the secret option, wow either i told you about it or you thought it would be a cool idea to check out if -6 was something but now you have 100 tries 1 for each number')
+elseif(d==1000000)
+    n=1;
+    disp('wow you picked the number 1 million, i wouldnt expect that to happen but here we are, you have one shot but im literally giving you the awnser')
+    pause(2)
+    disp(a)
+    pause(1)
+    disp('it is impossible to fail unless you dont follow the rules')
+end
+    pause(2.5)
+%user choice begins
+for i=1:n
+    
+    b=input('type your guess=');
+  
+    if(a>b)
+        disp('the random number is greater than your guessed try again')
+ 
+    elseif(a<b)
+        disp('the random number is lower than your guess try again')
+    
+    elseif(a==b)
+        disp('you have guessed correctly good job')
+        break
+    end
+end
+   
+pause(3)
+
+if(a<b )
+    disp('you lost you can try again....the awnser was')
+    disp(a)
+elseif(a>b)
+    disp('you lost you can try again....the awnser was')
+    disp(a)
+elseif(a==b)
+    disp('good job you guessed corectly, why not play again or play agin on a harder difficulty')
+end
+
+c=input('enter 1 to play again or enter 0 to end the game=');
+clc
+
+    end
+end
